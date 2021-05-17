@@ -21,7 +21,7 @@ Install Homesick first
 
 Now it's time to clone this dotfiles as a Castle
 
-    homesick clone git@github.com:jsalinaspolo/dotfiles.git
+    homesick clone git@github.com:kvi-ki/dotfiles.git
     homesick link dotfiles
 
 Time to change the shell to zsh
@@ -39,7 +39,6 @@ All of them located in `init` folder:
     init/brew.sh
     init/cash.sh
     init/macos.zsh
-    init/sdkman.zsh
 
 ## Manytricks settings
 

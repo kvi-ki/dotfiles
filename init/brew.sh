@@ -9,35 +9,18 @@ brew tap snyk/tap
 brew tap weaveworks/tap
 
 formulae="
-ack
 autojump
-bat
-gettext
 git
 grep
 heroku
 htop
-packer
-pv
 rbenv
 ruby-build
-screen
-stern
 tree
 vim
-watch
 wget
-kubernetes-cli
-helm
-tfenv
-stern
-k9s
 jq
 gh
-kustomize
-go
-snyk
-weaveworks/tap/eksctl
 "
 
 for f in $formulae; do
