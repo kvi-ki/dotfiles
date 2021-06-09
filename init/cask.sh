@@ -7,6 +7,7 @@ brew tap homebrew/cask-fonts
 brew tap homebrew/cask-drivers
 
 formulae="
+slack
 iterm2
 appcleaner
 docker
@@ -23,5 +24,5 @@ rectangle
 "
 
 for f in $formulae; do
-  brew cask install $f
+  brew install --cask $f
 done

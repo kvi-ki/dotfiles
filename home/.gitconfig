@@ -1,80 +1,82 @@
+[init]
+        templatedir = /Users/victoria.kovaleva/.acn-security-tools/git-template
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+        insteadOf = https://github.com/
 [user]
-	name = Javier Salinas
-	email = jsalinaspolo@gmail.com
+        name = Victoria Kovaleva
+        email = victoria.kovaleva@accenture.com
 [core]
-	excludesfile = /Users/jsalinas/.gitignore_global
+        excludesfile = /Users/victoria.kovaleva/.gitignore_global
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path = 
 [alias]
-	st = status
-	ci = commit
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
-	co = checkout
-	b = branch
-	r = rebase
-	m = merge
-	springcleaning = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'
-	sb = status -sb
-  # Show the diff between the latest commit and the current state
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager difftool --patch-with-stat"
-  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
-  di = !"d() { git difftool --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
-	showtool = "!sh -c 'if [ -z $1 ]; then REVISION=HEAD; else REVISION=$1; fi; git difftool $REVISION~ $REVISION' -"
-  lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	dt = difftool
-	cp = cherry-pick
-	un = reset @^1
-  bd = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
-  
+        st = status
+        ci = commit
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
+        co = checkout
+        b = branch
+        r = rebase
+        m = merge
+        springcleaning = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'
+        sb = status -sb
+        # Show the diff between the latest commit and the current state
+        d = !"git diff-index --quiet HEAD -- || clear; git --no-pager difftool --patch-with-stat"
+        # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+        di = !"d() { git difftool --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+        showtool = "!sh -c 'if [ -z $1 ]; then REVISION=HEAD; else REVISION=$1; fi; git difftool $REVISION~ $REVISION' -"
+        lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+        lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+        dt = difftool
+        cp = cherry-pick
+        un = reset @^1
+        bd = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+        
 [core]
-  # Use custom `.gitignore` and `.gitattributes`
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
-	autocrlf = input
-	editor = vim
+        # Use custom `.gitignore` and `.gitattributes`
+        excludesfile = ~/.gitignore
+        attributesfile = ~/.gitattributes
+        autocrlf = input
+        editor = vim
 [color]
-  # Use colors in Git commands that are capable of colored output when outputting to the terminal
-  ui = auto
+        # Use colors in Git commands that are capable of colored output when outputting to the terminal
+        ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+        current = yellow reverse
+        local = yellow
+        remote = green
 [color "diff"]
-  meta = yellow 
-  frag = magenta 
-  old = red 
-  new = green 
+        meta = yellow 
+        frag = magenta 
+        old = red 
+        new = green 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+        added = yellow
+        changed = green
+        untracked = cyan
 [push]
-	default = simple
+        default = simple
 [diff]
-	tool = vimdiff2
+        tool = vimdiff2
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+        clean = git-media-clean %f
+        smudge = git-media-smudge %f
 [pull]
-	rebase = true
+        rebase = true
 [rebase]
-	instructionFormat = (%an <%ae>) %s
-	instructionFormat = %s - %an <%ae>
-	instructionFormat = %s [%an]
-	instructionFormat = %s  %C(blue)[%an]
-	instructionFormat = %s  %Cblue%[%an]%Creset
-	instructionFormat = %s [%an]
-	instructionFormat = %s [@%an]
+        instructionFormat = (%an <%ae>) %s
+        instructionFormat = %s - %an <%ae>
+        instructionFormat = %s [%an]
+        instructionFormat = %s  %C(blue)[%an]
+        instructionFormat = %s  %Cblue%[%an]%Creset
+        instructionFormat = %s [%an]
+        instructionFormat = %s [@%an]
 [commit]
-	template = ~/.gitcommittemplate
+        template = ~/.gitcommittemplate
 [pager]
-  #eg: g config --global pager.diff false
-	branch = false
+        #eg: g config --global pager.diff false
+        branch = false
 [rerere]
-	enabled = true
+        enabled = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+        insteadOf = https://github.com/

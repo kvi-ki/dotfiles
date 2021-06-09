@@ -1,15 +1,7 @@
 source ~/.zsh/prompt.zsh
 source ~/.zsh/antigen.zsh
 source ~/.zsh/rbenv.zsh
-source ~/.zsh/sdkman.zsh
 #source ~/.zsh/nvm.zsh
-source ~/.zsh/k8s.zsh
-
-unalias gk
-
-alias ops='eval $(op signin auth0)'
-
-export PATH=$PATH:$(go env GOPATH)/bin
 
 #[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 

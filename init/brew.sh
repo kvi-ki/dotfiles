@@ -5,8 +5,6 @@ IFS='
 brew update
 
 brew tap heroku/brew
-brew tap snyk/tap
-brew tap weaveworks/tap
 
 formulae="
 autojump
