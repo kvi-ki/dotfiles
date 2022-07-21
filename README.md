@@ -37,7 +37,7 @@ Follow steps at https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-os
 All of them located in `init` folder:
 
     init/brew.sh
-    init/cash.sh
+    init/cask.sh
     init/macos.zsh
 
 ## Manytricks settings
