@@ -10,7 +10,7 @@ formulae="
 slack
 iterm2
 appcleaner
-chrome
+google-chrome
 docker
 slack
 the-unarchiver
