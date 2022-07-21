@@ -10,6 +10,7 @@ formulae="
 slack
 iterm2
 appcleaner
+chrome
 docker
 slack
 the-unarchiver
@@ -19,7 +20,6 @@ zoom
 miro
 spotify
 notion
-rescuetime
 rectangle
 "
 
